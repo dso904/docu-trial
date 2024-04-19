@@ -1,0 +1,116 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 20;
+  transform: translateY(100%);
+  color: var(--text);
+  background-color: white;
+  background: radial-gradient(at center, #6ec569, #3fa94f);
+}
+.content {
+  width: 100%;
+  height: 100%;
+  z-index: 21;
+  display: flex;
+  opacity: 0;
+}
+
+.image {
+  width: 50%;
+  z-index: 22;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding-left: 5em;
+  padding-right: 3em;
+}
+
+.img {
+  width: 100% !important;
+  height: 100% !important;
+  position: relative !important;
+  border-radius: 5px;
+  filter: grayscale(8%) sepia(15%) saturate(89%) contrast(84%);
+}
+
+.imgCont {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  width: 25vw;
+  height: 40vw;
+  border: 3px solid #fff6;
+  border-radius: 5px;
+
+}
+
+.goBack {
+  margin-top: -1em;
+  margin-bottom: 1.5em;
+  font-size: 1.6em;
+  font-family: "sharlee";
+  font-weight: 600;
+  color: inherit;
+  opacity: 0.6;
+  width: fit-content;
+  padding-left: 1em;
+  padding-right: 0.5em;
+  position: relative;
+}
+
+.goBack:hover {
+  cursor: pointer;
+}
+
+.goBack span {
+  margin-right: 0.2em;
+  font-family: "sharlee";
+  display: inline-block;
+  pointer-events: none;
+  transition: transform 0.1s ease-out;
+}
+
+.goBack:hover span {
+  transform: translateX(-7px);
+}
+
+.data {
+  width: 50%;
+  height: 100%;
+  z-index: 22;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 1em;
+  padding-right: 5em;
+  user-select: text;
+}
+
+.data h2 {
+  font-size: 3rem;
+  font-family: "sharlee";
+  font-weight: 700;
+  color: inherit;
+  margin-bottom: 0.5em;
+  margin-top: 1em;
+}
+
+.data h4 {
+  font-size: 1.35rem;
+  font-family: "HK";
+  font-weight: 400;
+  color: inherit;
+}
+
+.data h4 p {
+  font-size: inherit;
+  margin-bottom: 1.5rem;
+}
+
+.data h4 p:nth-last-child() {
+  margin-bottom: 0;
+}

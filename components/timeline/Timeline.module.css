@@ -1,0 +1,154 @@
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  z-index: 3;
+}
+
+.timeline__container {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.timeline__path {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0.3rem;
+  height: 100%;
+  opacity: .9;
+  background-color: rgb(255, 255, 255);
+}
+
+.timeline__blur {
+  position: sticky;
+  top: calc(100% - 150px);
+  width: 0.3rem;
+  height: 150px;
+  background-color: rgb(68, 110, 215);
+  opacity: 1;
+  clear: none;
+}
+
+.timeline__container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0.3rem;
+  height: 100%;
+  opacity: 0.6;
+  background: var(--gradient);
+}
+
+.timeline__container::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.num {
+  position: sticky;
+  top: 100%;
+  float: right;
+  margin-top: 10em;
+}
+
+.num span {
+  display: block;
+  font-size: 14rem;
+  font-family: "HK_wide";
+  opacity: 0.6;
+  transform: translateY(-18rem);
+  color: var(--text);
+  margin-bottom: -14rem;
+}
+
+.num span:hover {
+  opacity: 1;
+}
+
+.timeline__items {
+  position: relative;
+  width: 50%;
+  min-width: 600px;
+  float: left;
+  padding: 0 1em;
+  padding-bottom: 200px;
+}
+
+.timeline__item {
+  position: relative;
+  margin: 4em 0;
+  color: #eee;
+}
+
+.timeline__item:first-child {
+  margin-top: 0;
+}
+
+.timeline__item::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  background: var(--bg);
+  scale: var(--s);
+  transform: translate(-50%, -50%) rotate(-45deg);
+  width: 0.7em;
+  height: 0.7em;
+  left: calc(-1em + 0.15rem);
+  border-radius: 3px;
+  transition-duration: 0.3s ease;
+}
+
+.timeline__content {
+  position: relative;
+  padding: 1em;
+  border-radius: 15px;
+  box-shadow: 2px 10px 30px -5px rgba(0, 0, 0, 0.2);
+  border: 2px solid #fff9;
+  cursor: cell;
+  transition: box-shadow 0.3s ease, border 0.3s ease;
+  background-color: #5fb5d896;
+}
+
+.timeline__content:hover {
+  box-shadow: 2px 10px 30px -5px rgba(0, 0, 0, 0.4);
+  border: 2px solid #1112;
+  filter: brightness(1.05);
+}
+
+.timeline__content h2 {
+  margin: 0 0 1em;
+  font-size: 1.2em;
+  font-weight: 700;
+  font-family: "HK_wide";
+  pointer-events: none;
+}
+
+.timeline__content p {
+  margin: 0;
+  font-size: 0.8em;
+  font-family: "sharlee";
+  pointer-events: none;
+}
+
+
+@media screen and (max-width: 800px) {
+  .timeline__items {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .num { 
+    display: none;
+  }
+}
+
+@media screen and (max-width: 586px) {
+  .timeline__items {
+    padding-right: 0;
+  }
+}

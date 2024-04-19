@@ -1,0 +1,164 @@
+.header {
+    position: absolute;
+    width: 100vw;
+    height: var(--hh);
+    z-index: 10;
+    background-color: transparent;
+    top: 0;
+    
+    color: var(--text);
+    
+    padding: 0 4em;
+    transition: 0.2s ease-out;
+    display: flex;
+    justify-content: center;
+    transform-origin: top;
+}
+
+.inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    max-width: 1920px;
+}
+
+.header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 200%;
+    background: linear-gradient(180deg, #1119, transparent);
+    opacity: 0.1;
+    z-index: -1;
+}
+
+.header::after {
+    /* content: ""; */
+    position: absolute;
+    bottom: 0;
+    left: 2em;
+    width: calc(100% - 4em);
+    height: 2px;
+    background-color: var(--text);
+    border-radius: 4px;
+    opacity: 0.1;
+    transition: 0.2s ease-out;
+}
+
+.header[active] {
+    height: 5em;
+}
+
+.header[active]::after {
+    opacity: 0.2;
+}
+
+.headerTitle {
+    font-size: 1.6em;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.2s ease-out;
+}
+
+.headerTitle:hover {
+    background-color: #fff1;
+}
+
+.options {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.8em;
+}
+
+.options span {
+    font-size: 1.2em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.1s ease;
+    padding: 0.4em 0.6em;
+    border-radius: 10px;
+    transition: 0.2s ease;
+}
+
+.options span:hover {
+    background-color: rgba(255, 255, 255, 0.179);
+    filter: brightness(1.2);
+}
+
+.action .actionButton {
+    border-radius: 40px;
+    padding: .4em 1em;
+    font-size: 1em;
+    font-weight: 700;
+    cursor: pointer;
+    border: 2px solid var(--text);
+    transition: 0.2s ease-out;
+}
+
+.action .actionButton span {
+    display: inline-block;
+    transition: 0.2s ease-out;
+    margin: 0 0.2em 0 0.6em;
+    line-height: 1;
+    transform: translateY(1px);
+    pointer-events: none;
+}
+
+.action .actionButton:hover span {
+    transform: translate(5px, 1px);
+}
+
+.action .actionButton:hover {
+    background: rgba(241, 241, 241, 0.104);
+    opacity: 1;
+}
+
+.action .actionButton[btn-action="menu"] {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .header {
+        padding: 0 2em;
+    }
+
+    .headerTitle {
+        font-size: 1.4em;
+    }
+
+    .options {
+        gap: 1.2em;
+    }
+
+    .options span {
+        font-size: 1em;
+    }
+
+    .action .actionButton {
+        padding: .3em .8em;
+        font-size: .9em;
+    }
+
+    .action .actionButton span {
+        margin: 0 0.2em 0 0.4em;
+    }
+}
+
+@media (max-width: 500px) {
+    .action .actionButton[btn-action="player"] {
+        display: none;
+    }
+
+    .action .actionButton[btn-action="menu"] {
+        display: initial;
+    }
+
+    .options {
+        display: none;
+    }
+}

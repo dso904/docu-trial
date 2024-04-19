@@ -1,0 +1,150 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+width: 100vw;
+height: auto;
+min-height: 100%;
+overflow-x: hidden;
+font-family: 'sharlee';
+font-size: 14px !important;
+user-select: none;
+background: var(--secondary);
+position: relative;
+}
+:root {
+--primary: #b4d1c9;
+--secondary: #30cf3b96;
+--secondary-gradient: linear-gradient(180deg, #266f0e 0%,#01fb128b 60%, #05fdd884 100%);
+--text: white; 
+--bluish: #cfe7ef;
+--curtain: rgb(23, 144, 120);
+--content-box: #0ed8a28d;
+--target-bg: #a0c3d28b;
+--carausel-blue: #ffffff7d;
+--hh: 6em;
+}
+
+#appWrapper {
+display: flex;
+justify-content: center;
+flex-direction: column;
+}
+
+main {
+width: 100vw;
+max-width: 1920px;
+min-height: 100vh; 
+height: auto;
+background: var(--secondary-gradient);
+scroll-behavior: smooth;
+}
+
+#appWrapper {
+position: relative;
+}
+
+.fsBg {
+content: '';
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: #26cd4a76;
+z-index: 2;
+overflow: hidden;
+}
+
+.fsBg .fsBgVid {
+width: 100%;
+height: auto;
+position: fixed;
+top: 0;
+left: 0;
+opacity: 0.6;
+transform: scaleX(-1);
+}
+
+@media screen and (max-width: 600px) {
+.fsBg {
+  display: none;
+}
+}
+
+main > * {
+z-index: 5;
+}
+
+a {
+  text-decoration: none;
+  color: var(--bluish);
+  font-weight: 600;
+}
+
+.glitch {
+position: fixed;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+width: 100%;
+height: 100%;
+pointer-events: none;
+z-index: 9999;
+}
+
+
+
+
+
+
+/*  <===== Miscelaneous =====>  */
+
+::-webkit-scrollbar {
+display: none;
+}
+
+.scrollBar {
+  width: 8px;
+  height: 100vh;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 15;
+  --scroll: 0%;
+}
+
+.scrollBar::after {
+  content: '';
+  position: absolute;
+  background-color: rgba(16, 107, 6, 0.533);
+  top: 0;
+  right: 0;
+  width: 8px;
+  height: var(--scroll);
+  z-index: 2;
+}
+
+@media screen and (max-width: 500px) {
+  .scrollBar {
+    display: none;
+  }
+}
+
+::selection {
+opacity: 0.8;
+background-color: rgba(9, 9, 9, 0.256);
+border-radius: 20px;
+}
+
+@font-face {
+font-family: 'sharlee';
+src: url('/fonts/sharlee.ttf');
+}
+@font-face {
+  font-family: 'HK_wide';
+  src: url('/fonts/HK_wide.ttf');
+}
