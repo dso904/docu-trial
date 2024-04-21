@@ -212,7 +212,7 @@ function HomePage() {
         <title>Carbon Manager — Home</title>
       </Head>
       
-      <Ambience audioSrc="/music/cry.mp3" />
+      <Ambience audioSrc="/music/hrishi.mp3" />
       <div className={topic.overlay}>
         <div className={topic.content}>
           <div className={topic.image}>
