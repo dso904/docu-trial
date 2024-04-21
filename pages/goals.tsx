@@ -38,7 +38,7 @@ const Goals = () => {
       <Head>
         <title>Carbon Manager — Goals</title>
       </Head>
-      <Ambience audioSrc="/music/cry.mp3" />
+      <Ambience audioSrc="/music/hrishi.mp3" />
       <main id="goalsPage">
         <article className={styles.article}>
           <div className={styles.article__content}>
