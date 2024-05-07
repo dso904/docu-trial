@@ -79,6 +79,9 @@ Apart from this, it also has the following features:-<br></br><br></br>
             
             <h1>Chat2Eco-The AI Chatbot</h1>
             </a>
+            
+              {/* Notice */}
+            <p className={styles.notice}>Please note that, the Chat UI has been hosted on Render, and can take around 40 seconds to load. Please wait for the page to load before interracting with the ChatUI. </p>
              {/* Paragraph */}
              
             <p className={styles.p}>
