@@ -74,7 +74,7 @@ Apart from this, it also has the following features:-<br></br><br></br>
             
             <hr></hr>
             <br />
-            <a href="https://chatbot-new-e5ma.onrender.com/" target="_blank" rel="noopener noreferrer">
+            <a href="https://chat2eco.onrender.com" target="_blank" rel="noopener noreferrer">
             <Image src="/images/ChatUI.jpeg" alt="Forum"width={450} height={450} className={styles.page}/>
             
             <h1>Chat2Eco-The AI Chatbot</h1>
